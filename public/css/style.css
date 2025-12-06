@@ -8868,8 +8868,6 @@ hero-card.card-banner {
 
 .counter-wrapped {padding-block-start: var(--space-5); }
 
-.contribute-form { gap: var(--space-3); }
-
 
 /**
 *HISTORY
@@ -8879,3 +8877,45 @@ hero-card.card-banner {
 .history-card .card-header {gap: var(--space-3); }
 }
 
+/** new adds */
+
+/* Auth Pages */
+.auth-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff7e6;
+}
+
+.auth-container {
+    background: white;
+    padding: 40px;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: black;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.switch-auth {
+    margin-top: 15px;
+}

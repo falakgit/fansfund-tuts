@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support My Work</title>
+  
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #222;
+        }
+
+        /* HEADER */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 25px;
+            border-bottom: 1px solid #eee;
+            background: white;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            font-size: 30px;
+            margin-right: 8px;
+            color: #ff009d;
+        }
+
+        .header-right a {
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #222;
+            font-weight: 600;
+        }
+
+        .btn-small {
+            padding: 8px 15px;
+            background:  #ff009d;
+            color: white;
+            border-radius: 20px;
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding: 70px 20px 50px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .big-button {
+            padding: 15px 35px;
+            border-radius: 30px;
+            background:  #ff009d;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .sub-text {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* 2 COLUMN SECTION */
+        .section {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 50px 30px;
+        }
+
+        .box {
+            width: 40%;
+            background: #fafafa;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        .box h2 {
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        .box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .box ul li {
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .check {
+            color:  #ff009d;
+            margin-right: 6px;
+            font-size: 18px;
+        }
+
+        @media(max-width: 900px) {
+            .section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">
+            <span>☕</span> Fansfund
+        </div>
+
+        <div class="header-right">
+            <a href="/login">Sign in</a>
+            <a href="/signin" class="btn-small">Log in</a>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <h1>Fund your creative work</h1>
+        <p>Accept support. Start a membership. Set up a shop. It’s easier than you think.</p>
+
+        <a href="/signin" class="big-button">Start my page</a>
+
+        <div class="sub-text">It’s free and takes less than a minute!</div>
+    </div>
+
+    <!-- TWO COLUMN CONTENT -->
+    <div class="section">
+
+        <div class="box">
+            <h2>Make 20% or more, compared to other platforms.</h2>
+
+            <ul>
+                <li><span class="check">✔</span> Earn instantly without delays</li>
+                <li><span class="check">✔</span> Get direct support from your audience</li>
+                <li><span class="check">✔</span> Lower fees than other creator platforms</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>Designed for creators, not for businesses.</h2>
+
+            <ul>
+                <li><span class="check">✔</span> Build your page easily</li>
+                <li><span class="check">✔</span> No complicated setup</li>
+                <li><span class="check">✔</span> Perfect for artists, influencers, writers</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>

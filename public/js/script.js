@@ -2,7 +2,7 @@
  * @license Apache-2.0
  * @copyright 2024 codewithsadee
  */
- 
+
 'use strict';
 
 (function () {
@@ -29,11 +29,11 @@
   /**
    * decrement
    */
-  $decrementBtn.addEventListener('click' , function (){
-   const currentValue = $counterField.value;
-    if (currentValue > maxValue) $counterField.value = Number(currentValue) - 1;
+  $decrementBtn.addEventListener('click', function () {
+    const currentValue = $counterField.value;
+    if (currentValue > minValue) $counterField.value = Number(currentValue) - 1;
     updateTotal.call($counterField);
-  
+
   });
 
   const updateTotal = function () {
@@ -49,46 +49,47 @@
    */
 
 
-const contributeForm = document.querySelector('[data-contribute-form]');
+  const contributeForm = document.querySelector('[data-contribute-form]');
 
-const submitBtn = document.querySelector('[data-submit-btn]');
+  const submitBtn = document.querySelector('[data-submit-btn]');
 
-contributeForm.addEventListener('submit', async function (event) {
-  event.preventDefault();
+  contributeForm.addEventListener('submit', async function (event) {
+    event.preventDefault();
 
-  try {
-    submitBtn.setAttribute('disabled', '');
+    try {
+      submitBtn.setAttribute('disabled', '');
 
-    const formFields = document.querySelectorAll('[data-form-field]');
-    const formData = {};
+      const formFields = document.querySelectorAll('[data-form-field]');
+      const formData = {};
 
-    formFields.forEach(item => {
-      formData[item.getAttribute('name')] = item.value.trim();
-    });
+      formFields.forEach(item => {
+        formData[item.getAttribute('name')] = item.value.trim();
+      });
+     /* formData.amount = $counterField.value;  */
 
-    const response = await fetch('/checkout',{
-      method: 'POST' ,
-      body: new URLSearchParams(formData).toString(),
-      headers:{ 
-        'content-Type': 'application/X-WWW-form-urlencoded'
+      const response = await fetch('http://localhost:3000/checkout', {
+        method: 'POST',
+        body: new URLSearchParams(formData).toString(),
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      });
+
+      if (response.ok) {
+        const responseData = await response.json();
+        console.log(responseData);
+      } else {
+        console.error('Form submission failed: ', response.statusText);
       }
-    });
 
-    if (response.ok) {
-    const responseData = await response.json();
-    console.log(responseData);
-   } else {
-    console.error('Form submission failed: ', response.statusText);
-   }
+    } catch (error) {
+      console.error(error);
+      throw error;
 
-  } catch (error) {
-    console.error(error);
-    throw error;
-
-  } finally {
-    submitBtn.removeAttribute('disabled');
-  }
-});
+    } finally {
+      submitBtn.removeAttribute('disabled');
+    }
+  });
 
 
 
