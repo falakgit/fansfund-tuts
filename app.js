@@ -52,11 +52,7 @@ app.use('/checkout', checkout);
 app.listen(process.env.PORT, () => {
   console.log(`app listening on http://localhost:${process.env.PORT}`);
 });
-/**
- * new route 
- 
-const checkoutRoute = require("./src/routes/checkout.route"); // route import
-app.use("/", checkoutRoute); // use kar do */
+
 
 
 
