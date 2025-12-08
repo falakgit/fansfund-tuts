@@ -54,9 +54,9 @@ app.listen(process.env.PORT, () => {
 });
 /**
  * new route 
- */
+ 
 const checkoutRoute = require("./src/routes/checkout.route"); // route import
-app.use("/", checkoutRoute); // use kar do
+app.use("/", checkoutRoute); // use kar do */
 
 
 
